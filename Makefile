@@ -1,2 +1,2 @@
-build:
-	v main.v
+build-test:
+	v . -o test
