@@ -2,20 +2,16 @@ module mazegen_v
 
 import rand
 
-fn print_maze_matrix(mat [][]int, curr_pos []int) {
+pub fn print_maze(mat [][]int) {
 	for i in 0..mat.len * mat.len {
-		if [i % mat.len, i / mat.len] == curr_pos {
-			print("<>")
-		} else {
-			print(match mat[i / mat.len][i % mat.len] {
-				0 { "  " }
-				1 { "██" }
-				else {
-					println("what")
-					exit(1)
-				}
-			})
-		}
+		print(match mat[i / mat.len][i % mat.len] {
+			0 { "  " }
+			1 { "██" }
+			else {
+				println("what")
+				exit(1)
+			}
+		})
 
 		if i % mat.len == mat.len - 1 {
 			print("\n")

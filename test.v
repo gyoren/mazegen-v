@@ -1,5 +1,5 @@
 import mazegen_v
 
 fn main() {
-	println(mazegen_v.generate(5))
+	mazegen_v.print_maze(mazegen_v.generate(5))
 }
